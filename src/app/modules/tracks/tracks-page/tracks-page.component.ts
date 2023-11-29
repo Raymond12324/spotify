@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TrackModel } from '@core/models/tracks.model';
 
 @Component({
   selector: 'app-tracks-page',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class TracksPageComponent {
 
+  mockTracksList: Array<TrackModel> = [
+  
+  ]
 }
