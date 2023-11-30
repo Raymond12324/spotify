@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
+Router
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',
@@ -15,7 +16,7 @@ export class SideBarComponent {
       {
         name: 'Home',
         icon: 'uil uil-estate',
-        router: ['/', 'auth']
+        router: ['/', 'tracks']
       },
       {
         name: 'Buscar',
@@ -59,5 +60,12 @@ export class SideBarComponent {
         router: ['/']
       }
     ]
+  }
+
+  constructor(private router : Router){}
+
+  goTo(event:any){
+    this.router.navigate(['/','favorites'])
+    console.log(event)
   }
 }
